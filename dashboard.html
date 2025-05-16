@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucursales</title>
+    <title>Centro comercial</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
             <nav class="nav-menu">
                 <div class="menu-category">Menu</div>
 
-                <a class="nav-item" href="dashboard.html">
+                <a class="nav-item active" href="dashboard.html">
                     <div class="nav-icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -44,7 +43,7 @@
                 </a>
 
 
-                <a class="nav-item active" href="sucursales.html">
+                <a class="nav-item" href="sucursales.html">
                     <div class="nav-icon">
                         <i class="fa-solid fa-shop"></i>
                     </div>
@@ -95,77 +94,43 @@
             </header>
 
 
-            <section class="title-page">
-                <div class="title-page__icon">
-                    <i class="fas fa-users"></i>
+            <section class="welcome-section">
+                <div class="welcome-header">
+                    <h1 class="welcome-title">¡Bienvenido, Javier!</h1>
+                    <p class="welcome-subtitle">Aquí encontrarás las estadísticas mas importantes.</p>
                 </div>
-                <p>Sucursales</p>
             </section>
 
 
             <div class="content-area">
-                <div class="container-form">
-                    <div class="title-form">
-                        <p>Agregar sucursal</p>
-                    </div>
-                    <div class="items-form">
-                        <div class="item-form">
-                            <label for="" class="label-form">Nombre de la sucursal</label>
-                            <input type="text" id="nombre" class="input-form"
-                                placeholder="Ingrese el nombre completo del cliente">
+                <div class="content-graphics">
+                    <div class="graphics-item">
+                        <div class="graphics-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
                         </div>
-                        <div class="item-form">
-                            <label for="" class="label-form">Código o identificador de la sucursal</label>
-                            <input type="text" id="codigo" class="input-form"
-                                placeholder="Ingrese el nombre completo del cliente">
-                        </div>
-                        <div class="item-form">
-                            <label for="" class="label-form">Dirección</label>
-                            <input type="text" id="direccion" class="input-form"
-                                placeholder="Ingrese un correo válido ">
-                        </div>
-                        <div class="item-form">
-                            <label for="" class="label-form">Ciudad</label>
-                            <input type="text" id="ciudad" class="input-form"
-                                placeholder="Ingrese el número del documento">
-                        </div>
-                        <div class="item-form">
-                            <label for="" class="label-form">Teléfono</label>
-                            <input type="text" id="telefono" class="input-form"
-                                placeholder="Ingrese el número del documento">
-                        </div>
-                        <div class="item-form">
-                            <label for="" class="label-form">Correo electrónico de la sucursal</label>
-                            <input type="text" id="correo" class="input-form"
-                                placeholder="Ingrese el número del documento">
+                        <div class="graphics-texts">
+                            <p>Productos en inventario</p>
+                            <p class="graphics-texts__number"><span>86.450</span></p>
                         </div>
                     </div>
-                    <div class="buttons-form">
-                        <button type="button" class="button-form" id="saveButton">
-                            <i class="fa-solid fa-floppy-disk"></i>
-                            <p>Guardar</p>
-                        </button>
+                    <div class="graphics-item">
+                        <div class="graphics-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="graphics-texts">
+                            <p>Clientes activos</p>
+                            <p class="graphics-texts__number"><span>178.900</span></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="container-form">
-                    <div class="title-form">
-                        <p>Sucursales registradas</p>
+                    <div class="graphics-item">
+                        <div class="graphics-icon">
+                            <i class="fa-solid fa-shop"></i>
+                        </div>
+                        <div class="graphics-texts">
+                            <p>Sucursales activas</p>
+                            <p class="graphics-texts__number"><span>1.450</span></p>
+                        </div>
                     </div>
-                    <table class="tabla">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Código o identificador</th>
-                                <th>Dirección</th>
-                                <th>Ciudad</th>
-                                <th>Teléfono</th>
-                                <th>Correo electrónico</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="sucursalesTableBody"></tbody>
-                    </table>
                 </div>
             </div>
         </main>
@@ -176,7 +141,6 @@
             document.querySelector('.sidebar').classList.toggle('open');
         });
     </script>
-    <script src="js/sucursales.js"></script>
 </body>
 
 </html>

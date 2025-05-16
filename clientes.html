@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             <nav class="nav-menu">
                 <div class="menu-category">Menu</div>
 
-                <a class="nav-item" href="index.html">
+                <a class="nav-item" href="dashboard.html">
                     <div class="nav-icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -74,7 +75,7 @@
                     </button>
 
                     <div class="search-bar">
-                       <input type="text" class="search-input" placeholder="Buscar...">
+                        <input type="text" class="search-input" placeholder="Buscar...">
                         <div class="search-icon">
                             <i class="fas fa-search"></i>
                         </div>
@@ -87,11 +88,9 @@
                         <div class="notification-badge"></div>
                     </div>
 
-                    <div class="user-menu">
-                        <div class="user-menu-avatar">
-                            <img src="/images/avatar.jpg" alt="User">
-                        </div>
-                    </div>
+                    <a class="header-icon" href="index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
                 </div>
             </header>
 
@@ -111,25 +110,28 @@
                     </div>
                     <div class="items-form">
                         <div class="item-form">
-                            <label for="" class="label-form">Número del documento</label>
-                            <input type="text" class="input-form" placeholder="Ingrese el número del documento">
+                            <label for="documentNumber" class="label-form">Número del documento</label>
+                            <input type="text" id="documentNumber" class="input-form"
+                                placeholder="Ingrese el número del documento">
                         </div>
                         <div class="item-form">
-                            <label for="" class="label-form">Nombre completo </label>
-                            <input type="text" class="input-form" placeholder="Ingrese el nombre completo del cliente">
+                            <label for="fullName" class="label-form">Nombre completo</label>
+                            <input type="text" id="fullName" class="input-form"
+                                placeholder="Ingrese el nombre completo del cliente">
                         </div>
                         <div class="item-form">
-                            <label for="" class="label-form">Correo </label>
-                            <input type="text" class="input-form" placeholder="Ingrese un correo válido ">
+                            <label for="email" class="label-form">Correo</label>
+                            <input type="text" id="email" class="input-form" placeholder="Ingrese un correo válido">
                         </div>
                     </div>
                     <div class="buttons-form">
-                        <button type="button" class="button-form">
+                        <button type="button" id="saveButton" class="button-form">
                             <i class="fa-solid fa-floppy-disk"></i>
                             <p>Guardar</p>
                         </button>
                     </div>
                 </div>
+
 
                 <div class="container-form">
                     <div class="title-form">
@@ -144,30 +146,7 @@
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>12345678</td>
-                                <td>Juan Pérez</td>
-                                <td>juan@example.com</td>
-                                <td>
-                                    <div class="tabla-icons">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                        <i class="fa-solid fa-trash"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>87654321</td>
-                                <td>Maria López</td>
-                                <td>maria@example.com</td>
-                                <td>
-                                    <div class="tabla-icons">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                        <i class="fa-solid fa-trash"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tbody id="clientesTableBody"></tbody>
                     </table>
                 </div>
             </div>
@@ -179,6 +158,7 @@
             document.querySelector('.sidebar').classList.toggle('open');
         });
     </script>
+    <script src="js/clientes.js"></script>
 </body>
 
 </html>
